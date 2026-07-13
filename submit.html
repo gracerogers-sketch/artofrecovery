@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Submit Your Story & Contact · The Art of Recovery Magazine</title>
+<meta name="description" content="Submit your story, art, poetry, music, or photography to The Art of Recovery Magazine, or contact our founders.">
+<link rel="icon" type="image/jpeg" href="assets/cover.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><img src="assets/cover.jpeg" alt="The Art of Recovery"><span>The Art of Recovery</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mainnav" onclick="var n=document.getElementById('mainnav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
+    <nav class="main" id="mainnav" aria-label="Main">
+      <a href="index.html">Cover</a>
+      <a href="current-issue.html">Current Issue</a>
+      <a href="archive.html">Archive</a>
+      <a href="contributors.html">Contributors</a>
+      <a href="about.html">About</a>
+      <a href="press.html">Press &amp; Media</a>
+      <a href="submit.html" class="active">Submit / Contact</a>
+      <a href="subscribe.html" class="btn-subscribe">Subscribe</a>
+    </nav>
+  </div>
+</header>
+
+
+<main class="wrap">
+  <div class="kicker">Call for Submissions</div>
+  <h1 class="page-title">Submit Your Story</h1>
+  <p class="page-sub" style="margin-bottom:14px">You are the artist &mdash; share your &ldquo;art&rdquo; with us.</p>
+  <p class="page-sub">Do you have a story to tell? We want to read it. A song, a poem, a photograph? We want it. Painting or tattoo, film or fierce honest essay &mdash; whatever shape your truth takes, bring it. This magazine belongs to the people living the story.</p>
+
+  <div class="card frame" style="max-width:760px;margin:0 auto">
+    <form id="submitForm">
+      <div class="row">
+        <div><label for="s-name">Name or Pen Name</label><input id="s-name" name="name" required placeholder="How you'd like to be credited"></div>
+        <div><label for="s-email">Your Email</label><input id="s-email" name="email" type="email" required placeholder="you@example.com"></div>
+      </div>
+      <label for="s-type">Type of Work</label>
+      <select id="s-type" name="type">
+        <option>Personal Essay / Story</option>
+        <option>Poem</option>
+        <option>Artwork / Painting / Tattoo</option>
+        <option>Photograph</option>
+        <option>Song / Music</option>
+        <option>Film / Video</option>
+        <option>Article Pitch (professional / clinical)</option>
+        <option>Other</option>
+      </select>
+      <label for="s-title">Title of Your Piece</label>
+      <input id="s-title" name="title" placeholder="Untitled is fine too">
+      <label for="s-body">Tell Us About It</label>
+      <textarea id="s-body" name="body" rows="7" required placeholder="A line or two about your work &mdash; or paste the piece itself right here."></textarea>
+      <p class="form-note">Pressing the button opens your email app with everything pre-filled, addressed to our editor&rsquo;s inbox at <a href="mailto:Submissions@theartofrecoverymag.com">Submissions@theartofrecoverymag.com</a>. Attach any files (images, audio, PDFs) before you hit send. Readers in recovery and contributors discovered through Issue One &mdash; this door is open to you.</p>
+      <div style="text-align:center;margin-top:24px"><button class="btn btn-gold" type="submit">Send to Our Editor</button></div>
+    </form>
+  </div>
+
+  <blockquote style="max-width:620px;margin:60px auto 0;text-align:center;font-style:italic;font-size:23px;border:none">
+    &ldquo;If you want to meet the most creative, deep-thinking, deep-feeling, amazing people in the world, go visit a drug rehab.&rdquo;
+    <footer class="form-note" style="margin-top:12px">&mdash; Mike O&rsquo;Reilly, Co-Founder</footer>
+  </blockquote>
+
+  <section id="contact" style="margin-top:90px">
+    <div class="kicker">Reach Us</div>
+    <h2 class="page-title" style="font-size:clamp(28px,4vw,44px)">Contact</h2>
+    <p class="page-sub">We read everything. Say hello, ask a question, or start a conversation.</p>
+    <div class="people" style="max-width:760px;margin-left:auto;margin-right:auto">
+      <div class="person">
+        <img src="assets/mike.jpeg" alt="Mike O&rsquo;Reilly">
+        <div class="nm">Mike O&rsquo;Reilly</div>
+        <div class="rl">Co-Founder &amp; Editor-in-Chief</div>
+        <p class="em"><a href="mailto:mike@theartofrecoverymag.com">mike@theartofrecoverymag.com</a></p>
+      </div>
+      <div class="person">
+        <img src="assets/grace.jpeg" alt="Grace Rogers">
+        <div class="nm">Grace Rogers</div>
+        <div class="rl">Co-Founder &amp; Chief Marketing Officer</div>
+        <p class="em"><a href="mailto:grace@theartofrecoverymag.com">grace@theartofrecoverymag.com</a></p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:34px">Submissions: <a href="mailto:Submissions@theartofrecoverymag.com">Submissions@theartofrecoverymag.com</a></p>
+    <div class="socials">
+      <a href="https://instagram.com/artofrecoverymagazine" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 3.2.15 4.7 1.66 4.85 4.85.06 1.26.07 1.64.07 4.88s-.01 3.62-.07 4.88c-.15 3.18-1.65 4.7-4.85 4.85-1.2.06-1.6.07-4.8.07s-3.6-.01-4.8-.07c-3.2-.15-4.7-1.67-4.85-4.85C2.2 15.6 2.2 15.2 2.2 12s0-3.62.07-4.88C2.42 3.94 3.92 2.42 7.12 2.27 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.44 1.44 0 1 1-2.9 0 1.44 1.44 0 0 1 2.9 0z"/></svg>@artofrecoverymagazine</a>
+      <a href="https://www.facebook.com/artofrecoverymag/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.36c0-3 1.8-4.67 4.5-4.67 1.3 0 2.7.23 2.7.23v3h-1.5c-1.5 0-2 .93-2 1.88V12h3.4l-.55 3.5h-2.85v8.4A12 12 0 0 0 24 12z"/></svg>The Art of Recovery</a>
+      <a href="https://youtube.com/@theartofrecoverymagazine" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>@theartofrecoverymagazine</a>
+    </div>
+  </section>
+</main>
+<script>
+document.getElementById('submitForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=e.target;
+  var subject=encodeURIComponent('Submission: '+(f.title.value||'Untitled')+' ('+f.type.value+')');
+  var body=encodeURIComponent(
+    'Name / Pen Name: '+f.name.value+'\n'+
+    'Email: '+f.email.value+'\n'+
+    'Type of Work: '+f.type.value+'\n'+
+    'Title: '+(f.title.value||'Untitled')+'\n\n'+
+    f.body.value+'\n\n— Sent from theartofrecoverymag.com'
+  );
+  window.location.href='mailto:Submissions@theartofrecoverymag.com?subject='+subject+'&body='+body;
+});
+</script>
+<footer class="site-footer">
+  <div class="fk">The Art of Recovery Magazine</div>
+  <div class="ftag">Be the Artist.</div>
+  <p class="fmail">
+    <a href="mailto:mike@theartofrecoverymag.com">mike@theartofrecoverymag.com</a> &nbsp;·&nbsp;
+    <a href="mailto:grace@theartofrecoverymag.com">grace@theartofrecoverymag.com</a> &nbsp;·&nbsp;
+    <a href="mailto:Submissions@theartofrecoverymag.com">Submissions@theartofrecoverymag.com</a>
+  </p>
+  <div class="socials">
+    <a href="https://instagram.com/artofrecoverymagazine" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 3.2.15 4.7 1.66 4.85 4.85.06 1.26.07 1.64.07 4.88s-.01 3.62-.07 4.88c-.15 3.18-1.65 4.7-4.85 4.85-1.2.06-1.6.07-4.8.07s-3.6-.01-4.8-.07c-3.2-.15-4.7-1.67-4.85-4.85C2.2 15.6 2.2 15.2 2.2 12s0-3.62.07-4.88C2.42 3.94 3.92 2.42 7.12 2.27 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.44 1.44 0 1 1-2.9 0 1.44 1.44 0 0 1 2.9 0z"/></svg>Instagram</a>
+    <a href="https://www.facebook.com/artofrecoverymag/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.36c0-3 1.8-4.67 4.5-4.67 1.3 0 2.7.23 2.7.23v3h-1.5c-1.5 0-2 .93-2 1.88V12h3.4l-.55 3.5h-2.85v8.4A12 12 0 0 0 24 12z"/></svg>Facebook</a>
+    <a href="https://youtube.com/@theartofrecoverymagazine" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>YouTube</a>
+  </div>
+  <p class="copy">&copy; 2026 The Art of Recovery Magazine &middot; theartofrecoverymag.com &middot; Founded by Mike O&rsquo;Reilly, Grace Rogers &amp; Amy O&rsquo;Reilly</p>
+</footer>
+</body>
+</html>
