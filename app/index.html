@@ -90,7 +90,8 @@
     <h2 class="page-title" style="font-size:30px">The Premiere Issue</h2>
     <img class="issue-cover-lg" src="../assets/cover.jpeg" alt="Issue One cover">
     <p class="page-sub" style="font-size:18px">Eleven incredible contributors, one dedication, and the beginning of a global community.</p>
-    <a class="btn btn-gold btn-block" href="../issue-01.html">Open the Full Issue</a>
+    <a class="btn btn-gold btn-block" href="../issue-01-scroll.html">Open the Issue &mdash; Scroll Edition</a>
+    <a class="btn btn-ghost btn-block" href="../issue-01.html" style="margin-top:10px">Prefer page-turning? Flip Edition</a>
     <p class="fineprint">Read it unhurried &mdash; it&rsquo;s something you feel.</p>
   </div>
 </main>
@@ -179,7 +180,7 @@ function showTab(name){
   window.scrollTo(0,0);
 }
 function goIssue(){
-  if (isSubscribed()) { location.href='../issue-01.html'; }
+  if (isSubscribed()) { location.href='../issue-01-scroll.html'; }
   else { showTab('issue'); }
 }
 function toggleRestore(){
