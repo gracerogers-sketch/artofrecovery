@@ -544,5 +544,6 @@ function sendInquiry(){
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 </script>
+<a href="index.html" onclick="if(history.length>1){history.back();return false}" style="position:fixed;top:calc(12px + env(safe-area-inset-top));left:12px;z-index:2147483647;font-family:'Cinzel',serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#ECD591;background:rgba(8,17,38,.75);border:1px solid rgba(201,161,74,.55);border-radius:999px;padding:8px 16px;text-decoration:none;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)">&larr; Back</a>
 </body>
 </html>
