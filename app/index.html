@@ -64,28 +64,13 @@
   <p class="app-tagline">Something you don&rsquo;t just read, <span class="script">something you feel.</span></p>
   <div style="margin-top:26px">
     <button class="btn btn-gold btn-block" onclick="goIssue()">Read the Premiere Issue</button>
-    <button class="btn btn-ghost btn-block" onclick="showTab('subscribe')" id="cover-sub-btn">Subscribe &mdash; Free Until 12/2026</button>
   </div>
   <p class="fineprint" style="font-family:var(--script);font-size:24px;color:var(--gold-lite);font-style:normal;margin-top:30px">Be the Artist.</p>
 </main>
 
 <!-- ISSUE -->
 <main class="screen" id="scr-issue">
-  <div id="issue-locked" class="locked">
-    <div class="lock-badge"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z"/></svg>Subscribers Only</div>
-    <img class="issue-cover-lg" src="../assets/cover.jpeg" alt="Issue One cover">
-    <h2 class="page-title" style="font-size:30px">The Premiere Issue awaits.</h2>
-    <p class="page-sub" style="font-size:18px;margin-bottom:10px">Subscribe to unlock the complete first issue &mdash; free until December 2026, then $3.99/month.</p>
-    <button class="btn btn-gold btn-block" onclick="showTab('subscribe')">Subscribe to Read &mdash; $0 Today</button>
-    <p class="restore">Already subscribed? <a href="javascript:void(0)" onclick="toggleRestore()">Restore access</a></p>
-    <div class="restore-box" id="restore-box">
-      <label for="restore-email">Email used at checkout</label>
-      <input id="restore-email" type="email" placeholder="you@example.com">
-      <button class="btn btn-ghost btn-block" onclick="restoreAccess()">Restore</button>
-      <p class="ok-msg" id="restore-ok">Welcome back &mdash; access restored on this device.</p>
-    </div>
-  </div>
-  <div id="issue-unlocked" style="display:none">
+  <div id="issue-unlocked">
     <div class="kicker">Now Reading</div>
     <h2 class="page-title" style="font-size:30px">The Premiere Issue</h2>
     <img class="issue-cover-lg" src="../assets/cover.jpeg" alt="Issue One cover">
@@ -110,19 +95,6 @@
     <div class="issue-card coming"><div class="ph-cover">Issue 03</div><div class="meta"><div class="no">Coming Soon</div></div></div>
     <div class="issue-card coming"><div class="ph-cover">Issue 04</div><div class="meta"><div class="no">Coming Soon</div></div></div>
   </div>
-</main>
-
-<!-- SUBSCRIBE -->
-<main class="screen" id="scr-subscribe">
-  <div class="kicker">Join the Community</div>
-  <h2 class="page-title" style="font-size:30px">Subscribe</h2>
-  <div class="notice" style="margin:18px 0">
-    <div class="big">Free until December 2026</div>
-    <p style="margin:6px 0 0;font-size:16px">$0 today. Your card is billed $3.99/month beginning on or after <strong>December 1, 2026</strong>. Cancel anytime before then and you&rsquo;ll never pay a cent.</p>
-  </div>
-  <p class="page-sub" style="font-size:17px;margin-bottom:8px">One subscription covers the app and the website. Checkout is handled securely by Stripe &mdash; we never see or store your card.</p>
-  <a class="btn btn-gold btn-block" href="https://buy.stripe.com/9B67sLd7Ac8q5NXcA36Zy00">Start My Free Subscription</a>
-  <p class="fineprint">After checkout you&rsquo;ll return here with the issue unlocked.<br>Questions: <a href="mailto:grace@theartofrecoverymag.com">grace@theartofrecoverymag.com</a></p>
 </main>
 
 <!-- MORE -->
@@ -155,46 +127,18 @@
     <svg viewBox="0 0 24 24"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4zM18 20a2 2 0 0 0 2-2V6"/></svg>Issue</button>
   <button class="tab" data-tab="archive" onclick="showTab('archive')">
     <svg viewBox="0 0 24 24"><path d="M3 7h18v4H3zM5 11v8h14v-8M10 15h4"/></svg>Archive</button>
-  <button class="tab" data-tab="subscribe" onclick="showTab('subscribe')">
-    <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.5 12c-2 4.4-9.5 9-9.5 9z"/></svg>Subscribe</button>
   <button class="tab" data-tab="more" onclick="showTab('more')">
     <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>More</button>
 </nav>
 
 <script>
-// ---- subscription gate (device-level unlock) ----
-function isSubscribed(){ try{ return localStorage.getItem('aor_subscribed')==='1' }catch(e){ return true } }
-function setSubscribed(){ try{ localStorage.setItem('aor_subscribed','1') }catch(e){} refreshGate(); }
-function refreshGate(){
-  var un = isSubscribed();
-  document.getElementById('issue-locked').style.display = un ? 'none' : 'block';
-  document.getElementById('issue-unlocked').style.display = un ? 'block' : 'none';
-  var b = document.getElementById('cover-sub-btn'); if(b) b.style.display = un ? 'none' : 'inline-block';
-}
-// unlocked automatically when Stripe redirects to welcome.html (sets the flag) or ?unlock=1
-if (new URLSearchParams(location.search).get('unlock')==='1') setSubscribed();
-
 function showTab(name){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById('scr-'+name).classList.add('active');
   document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t.dataset.tab===name));
   window.scrollTo(0,0);
 }
-function goIssue(){
-  if (isSubscribed()) { location.href='../issue-01-scroll.html'; }
-  else { showTab('issue'); }
-}
-function toggleRestore(){
-  var b=document.getElementById('restore-box');
-  b.style.display = b.style.display==='block' ? 'none' : 'block';
-}
-function restoreAccess(){
-  var em=document.getElementById('restore-email').value.trim();
-  if(!em || em.indexOf('@')<0){ alert('Please enter the email you used at checkout.'); return; }
-  document.getElementById('restore-ok').style.display='block';
-  setTimeout(setSubscribed, 900);
-}
-refreshGate();
+function goIssue(){ location.href='../issue-01-scroll.html'; }
 // ---- PWA service worker ----
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('../sw.js');
 </script>
