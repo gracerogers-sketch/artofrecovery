@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Get the App — The Art of Recovery</title>
+<script>
+  // iPhone / iPad (newer iPads report as "MacIntel" with touch) -> App Store; everyone else -> website
+  (function () {
+    var ua = navigator.userAgent || "";
+    var isIOS = /iPhone|iPad|iPod/i.test(ua) ||
+                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var dest = isIOS ? "https://apps.apple.com/app/id6797572619"
+                     : "https://theartofrecoverymag.com/";
+    window.location.replace(dest);
+  })();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://theartofrecoverymag.com/"></noscript>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+       background:#0A1535;color:#ECD591;font-family:Georgia,serif;text-align:center;padding:24px}
+  h1{color:#C9A14A;font-weight:normal;font-size:28px;margin:0 0 20px}
+  a{display:block;margin:12px auto;max-width:280px;padding:12px 20px;border:1px solid #C9A14A;
+    border-radius:40px;color:#ECD591;text-decoration:none}
+</style>
+</head>
+<body>
+  <div>
+    <h1>The Art of Recovery</h1>
+    <a href="https://apps.apple.com/app/id6797572619">Get the App (iPhone &amp; iPad)</a>
+    <a href="https://theartofrecoverymag.com/">Visit the Website</a>
+  </div>
+</body>
+</html>
