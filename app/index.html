@@ -60,10 +60,10 @@
 <main class="screen active" id="scr-cover">
   <img class="app-logo" src="../assets/cover.jpeg" alt="The Art of Recovery Magazine">
   <div class="rule"></div>
-  <div class="kicker" style="letter-spacing:.4em">Volume One &middot; Premiere Issue</div>
+  <div class="kicker" style="letter-spacing:.4em">Volume One &middot; Issue Two</div>
   <p class="app-tagline">Something you don&rsquo;t just read, <span class="script">something you feel.</span></p>
   <div style="margin-top:26px">
-    <button class="btn btn-gold btn-block" onclick="goIssue()">Read the Premiere Issue</button>
+    <button class="btn btn-gold btn-block" onclick="goIssue()">Read Issue Two</button>
   </div>
   <p class="fineprint" style="font-family:var(--script);font-size:24px;color:var(--gold-lite);font-style:normal;margin-top:30px">Be the Artist.</p>
 </main>
@@ -72,11 +72,11 @@
 <main class="screen" id="scr-issue">
   <div id="issue-unlocked">
     <div class="kicker">Now Reading</div>
-    <h2 class="page-title" style="font-size:30px">The Premiere Issue</h2>
-    <img class="issue-cover-lg" src="../assets/cover.jpeg" alt="Issue One cover">
-    <p class="page-sub" style="font-size:18px">Eleven incredible contributors, one dedication, and the beginning of a global community.</p>
-    <a class="btn btn-gold btn-block" href="../issue-01-scroll.html">Open the Issue &mdash; Scroll Edition</a>
-    <a class="btn btn-ghost btn-block" href="../issue-01.html" style="margin-top:10px">Prefer page-turning? Flip Edition</a>
+    <h2 class="page-title" style="font-size:30px">Issue Two</h2>
+    <img class="issue-cover-lg" src="../assets/issue-02-cover.jpg" alt="Issue Two cover">
+    <p class="page-sub" style="font-size:18px">Volume One &middot; November 2026 &mdash; dedicated to Patrick Anthony Nelson.</p>
+    <a class="btn btn-gold btn-block" href="../issue-02-scroll.html">Open the Issue &mdash; Scroll Edition</a>
+    <a class="btn btn-ghost btn-block" href="../issue-02.html" style="margin-top:10px">Prefer page-turning? Flip Edition</a>
     <p class="fineprint">Read it unhurried &mdash; it&rsquo;s something you feel.</p>
   </div>
 </main>
@@ -87,11 +87,10 @@
   <h2 class="page-title" style="font-size:30px">Archive</h2>
   <p class="page-sub" style="font-size:18px">Every issue, kept here for you.</p>
   <div class="issue-grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:18px;margin-top:20px">
-    <a class="issue-card" href="javascript:void(0)" onclick="goIssue()">
+    <a class="issue-card" href="../issue-01-scroll.html">
       <img src="../assets/cover.jpeg" alt="Issue 01">
       <div class="meta"><div class="no">Issue 01</div><div class="ttl" style="font-size:17px">Premiere</div></div>
     </a>
-    <div class="issue-card coming"><div class="ph-cover">Issue 02</div><div class="meta"><div class="no">Coming Soon</div></div></div>
     <div class="issue-card coming"><div class="ph-cover">Issue 03</div><div class="meta"><div class="no">Coming Soon</div></div></div>
     <div class="issue-card coming"><div class="ph-cover">Issue 04</div><div class="meta"><div class="no">Coming Soon</div></div></div>
   </div>
@@ -138,7 +137,7 @@ function showTab(name){
   document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t.dataset.tab===name));
   window.scrollTo(0,0);
 }
-function goIssue(){ location.href='../issue-01-scroll.html'; }
+function goIssue(){ location.href='../issue-02-scroll.html'; }
 // ---- PWA service worker ----
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('../sw.js');
 </script>
